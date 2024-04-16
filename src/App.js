@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Player from './Pages/Player';
+import SongList from './Components/SongList';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
   <Routes>
     
     <Route path="/" element={<Player/>} />
+    <Route path='/songlist' element={<SongList />} />
     
   </Routes>
 
