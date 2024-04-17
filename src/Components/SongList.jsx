@@ -16,6 +16,10 @@ export default function SongList() {
 
     const [tracks, setTracks] = useState([]);
 
+    localStorage.setItem("tracks", JSON.stringify(tracks)); //  storing the tracks in local storage to access them in another component or page
+
+    const [trackid, setTrackid] = useState({}); 
+    console.log('helooooooooo',trackid);
 
     useEffect(() => {
 
@@ -88,6 +92,8 @@ export default function SongList() {
 
 
 
+
+
     return (
         <>
             <div class="container" id='containerlist'>
@@ -102,7 +108,7 @@ export default function SongList() {
 
                             {tracks.map((item) => (
 
-                                <div class="d-flex justify-content-between align-items-center p-3 music">
+                                <div class="d-flex justify-content-between align-items-center p-3 music" onClick={()=>setTrackid(item.track.id)}>
 
                                     <div class="d-flex flex-row align-items-center">
 

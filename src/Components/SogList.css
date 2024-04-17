@@ -3,7 +3,7 @@
 #containerlist{
 
     background-color: #e6b9b9c1;
-    font-family: "Poppins", sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     /* height: 100vh; */
     width: 550px;
     /* display: flex; */
@@ -20,7 +20,7 @@
     position: relative;
     right: 170px;
     border:none;
-    height: 600px;
+    height: 100%; 
     width: 400px;
     
 }
