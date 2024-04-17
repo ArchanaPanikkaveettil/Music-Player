@@ -48,10 +48,12 @@ export default function Player() {
 
                     {/* COL 2 */}
 
-                    <div class='col-lg-6' id='songlist'>
+                    <div class='col-lg-6'>
+                        <div  id='songlist' style={{paddingLeft:'40%'}}>
 
-                                <SongList />
+                            <SongList />
 
+                        </div>
                     </div>
 
                 </div> {/* row */}
