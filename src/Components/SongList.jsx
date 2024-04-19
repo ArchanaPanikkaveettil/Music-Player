@@ -3,7 +3,11 @@ import './SogList.css'
 import axios from 'axios'
 
 
-export default function SongList() {
+export default function SongList(argu) {
+
+
+    const trackid = argu.propname; //accessing the function from the parent component
+    // console.log('track-id', tackid);
 
 
 
@@ -13,13 +17,12 @@ export default function SongList() {
     const playlist_id = "37i9dQZF1DZ06evO2pb4Ji"; //can Change the playlist ID as per requirement
     const playlist_url = `https://api.spotify.com/v1/playlists/${playlist_id}`;
 
+   
+
 
     const [tracks, setTracks] = useState([]);
 
-    localStorage.setItem("tracks", JSON.stringify(tracks)); //  storing the tracks in local storage to access them in another component or page
-
-    const [trackid, setTrackid] = useState({}); 
-    console.log('helooooooooo',trackid);
+    
 
     useEffect(() => {
 
@@ -44,10 +47,14 @@ export default function SongList() {
                 );
 
                 const accessToken = response.data.access_token; //storing the access token in a variable
-                console.log('Access Token:', accessToken);      //printing the access token
+                // console.log('Access Token:', accessToken);  //printing the access token
 
+                sessionStorage.setItem('accessToken', accessToken);  //storing the access token in session storage
+                        
                 fetchPlaylistTracks(accessToken); //calling functions to be executed after getting access token
-                //passing access token as an argument
+                //passing access token as an argument //calling the function to get the playlist tracks
+
+
             } catch (error) {
                 console.error('Error getting access token:', error);
             }
@@ -71,7 +78,7 @@ export default function SongList() {
                 );
 
                 const playlistTracks = response.data.tracks.items;  //storing the tracks in a variable
-                console.log('Playlist Tracks:', playlistTracks);    //printing the tracks
+                // console.log('Playlist Tracks:', playlistTracks);    //printing the tracks
                 setTracks(playlistTracks);                          //storing the tracks in a state
 
                 //                  OR
@@ -84,10 +91,11 @@ export default function SongList() {
             }
         };
 
-
-
         getAccessToken();
-    }, [client_id, client_secret]);
+
+
+
+    }, []);
 
 
 
@@ -108,7 +116,8 @@ export default function SongList() {
 
                             {tracks.map((item) => (
 
-                                <div class="d-flex justify-content-between align-items-center p-3 music" onClick={()=>setTrackid(item.track.id)}>
+                                <div class="d-flex justify-content-between align-items-center p-3 music" onClick={() => trackid(item.track.id)}>
+                                                                                                    {/* id is passed as an argument to the function in player.jsx */}
 
                                     <div class="d-flex flex-row align-items-center">
 
