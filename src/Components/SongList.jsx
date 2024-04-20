@@ -17,48 +17,20 @@ export default function SongList(argu) {
     const playlist_id = "37i9dQZF1DZ06evO2pb4Ji"; //can Change the playlist ID as per requirement
     const playlist_url = `https://api.spotify.com/v1/playlists/${playlist_id}`;
 
-   
+
 
 
     const [tracks, setTracks] = useState([]);
 
-    
+
 
     useEffect(() => {
 
 
-        // Function to get access token
-        const getAccessToken = async () => {
+        const accessToken = sessionStorage.getItem('accessToken');
 
-
-            //api calling to get the access token
-            try {
-                const response = await axios.post(
-                    'https://accounts.spotify.com/api/token',
-                    new URLSearchParams({
-                        grant_type: 'client_credentials',
-                    }),
-                    {
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                            'Authorization': 'Basic ' + btoa(client_id + ':' + client_secret)
-                        }
-                    }
-                );
-
-                const accessToken = response.data.access_token; //storing the access token in a variable
-                // console.log('Access Token:', accessToken);  //printing the access token
-
-                sessionStorage.setItem('accessToken', accessToken);  //storing the access token in session storage
-                        
-                fetchPlaylistTracks(accessToken); //calling functions to be executed after getting access token
-                //passing access token as an argument //calling the function to get the playlist tracks
-
-
-            } catch (error) {
-                console.error('Error getting access token:', error);
-            }
-        };
+        fetchPlaylistTracks(accessToken); //calling functions to be executed after getting access token
+        //passing access token as an argument //calling the function to get the playlist tracks
 
 
 
@@ -91,7 +63,7 @@ export default function SongList(argu) {
             }
         };
 
-        getAccessToken();
+        
 
 
 
@@ -117,7 +89,7 @@ export default function SongList(argu) {
                             {tracks.map((item) => (
 
                                 <div class="d-flex justify-content-between align-items-center p-3 music" onClick={() => trackid(item.track.id)}>
-                                                                                                    {/* id is passed as an argument to the function in player.jsx */}
+                                    {/* id is passed as an argument to the function in player.jsx */}
 
                                     <div class="d-flex flex-row align-items-center">
 
