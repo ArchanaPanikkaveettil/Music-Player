@@ -176,7 +176,9 @@ export default function Home() {
                                                     {item.description}
                                                 </p>
                                             </div>
-                                            <i class="fas fa-play icon" id="playbutton" ></i>
+                                            <a href={`/playlist/${item.id}`}>
+                                                <i className="fas fa-play icon" id="playbutton"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

@@ -68,10 +68,8 @@ export default function Player() {
                             <div class="bg-image" id='bg-image' data-mdb-ripple-color="light">
                                 <img class="card-img-top" id="card-img" src="https://mdbootstrap.com/wp-content/uploads/2019/02/flam.jpg"
                                     alt="Music Image" />
-                                {/* <a href="#!">
-                                <div class="mask" ></div>
-                                </a> */}
                             </div>
+
                             <div class="card-body text-center">
 
                                 <h5 class="h5 font-weight-bold"><a href="#" id='songname' target="_blank">Song Name</a></h5>

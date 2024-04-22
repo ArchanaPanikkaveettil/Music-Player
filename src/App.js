@@ -13,8 +13,8 @@ function App() {
   <Routes>
     
     <Route path='/' element={<Home/>} />
-    <Route path='/playlist' element={<Playlist/>}/>
-    <Route path="/playlist" element={<Player/>} />
+    <Route path='/playlist/:id' element={<Playlist/>}/>
+    <Route path="/player" element={<Player/>} />
     <Route path='/songlist' element={<SongList />} />
     
   </Routes>

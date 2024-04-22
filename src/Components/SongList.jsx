@@ -11,9 +11,6 @@ export default function SongList(argu) {
 
 
 
-    const client_id = "f87b8dbde16844349e31be3de4bf9601"; //both recived from spotify developer account
-    const client_secret = "6fb6626ee4e844fc8f4cc9b71ea86a81";
-
     const playlist_id = "37i9dQZF1DZ06evO2pb4Ji"; //can Change the playlist ID as per requirement
     const playlist_url = `https://api.spotify.com/v1/playlists/${playlist_id}`;
 
