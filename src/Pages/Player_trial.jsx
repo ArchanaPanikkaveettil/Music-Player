@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Player.css'
+import '../Components/TrackPlayer.css'
 import SongList from '../Components/SongList'
 import axios from 'axios';
 

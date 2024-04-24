@@ -1,0 +1,174 @@
+#mobile-box {
+    width: 360px;
+    margin-top: 100px;
+}
+
+/* #bg-image :hover {
+
+    box-shadow: 0 20px 20px rgba(24, 11, 11, 0.767);
+
+} */
+
+#container {
+    background-color: blueviolet;
+    /* padding-bottom: 150px; */
+  
+}
+
+#card {
+
+    position: relative;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.651);
+}
+
+
+
+#card-img {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 221, 255, 0.854);
+    box-shadow: 0 20px 20px rgba(24, 11, 11, 0.767);
+
+}
+
+
+
+/* #card-img :hover {
+    box-shadow: 10px 10px 10px rgba(24, 11, 11, 0.5);
+} */
+
+
+
+
+#card h5 a {
+    color: #000000;
+}
+
+#card h5 a:hover {
+    color: #61068e;
+    /* text-shadow:1px 1px black */
+}
+
+/* ------------------------------------------------------------ */
+
+
+#songlistdiv {
+    position: relative;
+    bottom: 672px;
+    left: 466px;
+    /* overflow: auto; */
+}
+
+#artist_name {
+
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+
+}
+
+#artist_name:hover {
+    color: #510079;
+    text-shadow: 0 1px 1px black;
+}
+
+#songname {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+#songname:hover {
+    color: #510079;
+    text-shadow: 0 1px 1px black;
+}
+
+#songlist {
+    position: relative;
+    /* margin-left: 500px; */
+    /* padding-left: 200px; */
+
+}
+
+/* ------------------------------------------------------- */
+
+#playButton {
+    
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#pauseButton{
+    
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+#nextButton{
+ 
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+#previousButton{
+    
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+
+#timeline {
+    width: 90%;
+    height: 3px;
+    margin-top: 23px;
+    margin-left: 20px;
+    float: left;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#playhead {
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: -5px;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#volume{
+    position:relative;
+    right: 130px;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+#volumeSlider{
+    float: right;
+    position: relative;
+    bottom: 17px ;
+    height: 3px;
+   
+    width: 25%;
+    /* background-color: #510079; */    
+    
+}

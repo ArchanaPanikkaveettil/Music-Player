@@ -77,6 +77,11 @@
     bottom: 80px;
     margin-left: 230px;
   }
+  
+  #artistname{
+    font-size: 30px;
+  }
+
 
   /* #trackcard{
 

@@ -65,6 +65,8 @@ export default function Home() {
                 console.log('Featured Playlists:', response.data);
                 setPlaylistss(response.data.playlists.items);
 
+            }).catch(error => {
+                console.error('Error getting featured playlists:', error);
             })
     }
 
